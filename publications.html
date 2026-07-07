@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Sian Lun Lau</title>
+  <meta name="description" content="Full list of publications by Prof. Ts. Dr.-Ing. Sian Lun Lau — 120+ peer-reviewed papers across journals, conferences, book chapters, and books." />
+  <meta name="author" content="Sian Lun Lau" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .pub-page-header {
+      padding: 7rem 0 2.5rem;
+      text-align: center;
+    }
+    .pub-page-header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .pub-page-header p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .pub-page-header .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+    }
+    .pub-page-header .back-link:hover { text-decoration: underline; }
+
+    .pub-stats {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .pub-stat {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 0.75rem 1.25rem;
+      text-align: center;
+      min-width: 100px;
+    }
+    .pub-stat-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .pub-stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pub-filter-bar {
+      max-width: 850px;
+      margin: 1.5rem auto 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .pub-filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pub-filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .pub-filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .year-group { margin-bottom: 1rem; }
+    .year-heading {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      padding: 1.5rem 0 0.5rem 0;
+      border-bottom: 2px solid var(--accent-soft-border);
+      margin-bottom: 0;
+      position: sticky;
+      top: 60px;
+      background: var(--bg-primary);
+      z-index: 5;
+    }
+    .year-count {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-left: 0.5rem;
+    }
+    .pub-page-list .pub-item {
+      padding: 1rem 1rem;
+    }
+    .pub-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      min-width: 28px;
+      text-align: right;
+      padding-top: 0.2rem;
+      flex-shrink: 0;
+    }
+    .pub-page-footer {
+      text-align: center;
+      padding: 2.5rem 0 1rem;
+    }
+    .pub-page-section { padding: 0 0 3rem; }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">Sian Lun Lau</a>
+    <ul class="navbar-nav">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#teaching">Teaching</a></li>
+      <li><a href="index.html#talks">Professional</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+        <i class="fa-solid fa-sun" id="theme-icon-sun" style="display:none;"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="pub-page-header">
+      <div class="container">
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        <h1>Full Publications</h1>
+        <p>120+ peer-reviewed papers across journals, conferences, book chapters, and books spanning 2005&ndash;2026</p>
+        <div class="pub-stats">
+          <div class="pub-stat">
+            <div class="pub-stat-number" id="stat-total">121</div>
+            <div class="pub-stat-label">Total</div>
+          </div>
+          <div class="pub-stat">
+            <div class="pub-stat-number" id="stat-journals">26</div>
+            <div class="pub-stat-label">Journals</div>
+          </div>
+          <div class="pub-stat">
+            <div class="pub-stat-number" id="stat-conferences">82</div>
+            <div class="pub-stat-label">Conferences</div>
+          </div>
+          <div class="pub-stat">
+            <div class="pub-stat-number" id="stat-books">13</div>
+            <div class="pub-stat-label">Books &amp; Chapters</div>
+          </div>
+        </div>
+        <div class="pub-filter-bar">
+          <button class="pub-filter-btn active" data-filter="all">All</button>
+          <button class="pub-filter-btn" data-filter="journal">Journals</button>
+          <button class="pub-filter-btn" data-filter="conference">Conferences</button>
+          <button class="pub-filter-btn" data-filter="book">Books &amp; Chapters</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="pub-page-section">
+      <div class="container">
+        <div class="publications-list pub-page-list" id="pub-list">
+
+          <!-- ==================== 2026 ==================== -->
+          <div class="year-group" data-year="2026">
+            <div class="year-heading">2026 <span class="year-count">(5 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">1.</div>
+              <div class="pub-content">
+                <h4>The Evolution of Deep Learning Models for Instance Segmentation: A Critical Review and Analysis of Future Trajectories</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> R. K. Pathan, W. L. Lim, M. U. Khandaker, C. C. Ho, S. L. Lau &mdash; International Journal of Multimedia Information Retrieval, vol. 15, no. 3, p. 21</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">2.</div>
+              <div class="pub-content">
+                <h4>Optimizing Internet of Things Security: Artificial Neural Networks Algorithms Performance in Authentication and Authorization via Physical Layer Features</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> K. I. Ahmed, M. Tahir, Z. Jiangbin, S. L. Lau, M. H. Habaebi, A. Ahad &mdash; Engineering Applications of Artificial Intelligence, vol. 181</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">3.</div>
+              <div class="pub-content">
+                <h4>Sequence-Based Deep Learning for Handover Optimization in Dense Urban Cellular Network</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. Kabeer, R. Nordin, M. Behjati, S. L. Lau &mdash; IEEE Wireless Communications and Networking Conference (WCNC), pp. 1&ndash;6</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">4.</div>
+              <div class="pub-content">
+                <h4>Unplugged but Empowered: Investigating the Impact of 3Ps on Computational Thinking Activities</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> I. S. Ahmad, T. Y. Sim, C. A. Talib, S. L. Lau &mdash; IEEE Access, vol. 14, pp. 50340&ndash;50355</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">5.</div>
+              <div class="pub-content">
+                <h4>Preserving Fine-Grained Droplet Structures by Spatial Gaussian Blurring Against Pooling Deformation in U-Net-Based Semantic Segmentation</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> W. L. Lim, M. Y. W. Teow, R. T. K. Wong, S. L. Lau &mdash; IEEE Access, vol. 14, pp. 25354&ndash;25369</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2025 ==================== -->
+          <div class="year-group" data-year="2025">
+            <div class="year-heading">2025 <span class="year-count">(10 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">6.</div>
+              <div class="pub-content">
+                <h4>Innovative CNN-Based Model for Detecting Apple Plant Diseases Enhanced with Optimizer Technique</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. H. Rangkuti, J. M. Kerta, S. L. Lau, B. Juarto, R. M. Aridzal, A. Syamil &mdash; IEEE ICICoS, pp. 192&ndash;197</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">7.</div>
+              <div class="pub-content">
+                <h4>KeyAware: An Ethical Parental Monitoring Keylogger for Child Online Safety</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. S. Rafsanjani, S. Aslam, M. SaberiKamarposhti, M. B. Jasser, M. Tahir, S. L. Lau &mdash; IEEE ICSPC, pp. 187&ndash;192</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">8.</div>
+              <div class="pub-content">
+                <h4>Investigation on IoT and Cloud Technology Implementation for Smart Agriculture</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> J. A. Yap, A. H. Rangkuti, S. Sen, R. Murugesan, S. L. Lau &mdash; IEEE ICOCO, pp. 385&ndash;390</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">9.</div>
+              <div class="pub-content">
+                <h4>Early Detection of Apple Plant Diseases: Deep Learning and Similarity Measurement</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. H. Rangkuti, J. M. Kerta, S. L. Lau, B. Juarto, R. M. Aridzal, A. Syamil &mdash; IEEE ICORIS, pp. 1&ndash;6</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">10.</div>
+              <div class="pub-content">
+                <h4>Sustainable AI in the Cloud-to-Thing Continuum: A Bibliometric Review on Lightweight, Small-Sample, and Federated Learning Approaches</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, S. Aslam, A. Chakrabarti, J. Porras &mdash; IEEE ISVLSI, vol. 1, pp. 1&ndash;6</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">11.</div>
+              <div class="pub-content">
+                <h4>Learning by Doing: Demonstrating Sustainability Mindset in ICT Education Through Hackathons</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. O. Adisa, S. Oyedeji, J. Porras, S. L. Lau, T. Y. Sim, T. T. Ajagbe &mdash; IEEE ICT4S, pp. 187&ndash;197</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">12.</div>
+              <div class="pub-content">
+                <h4>Do Metacognitive Strategies Work? Moodle as a BCSS Tool to Enhance Self-Regulated Learning Behavior in Software Engineering Students</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. S. Haque, A. Tripathi, S. L. Lau, J. Porras &mdash; BCSS Workshop, CEUR, Limassol, Cyprus</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">13.</div>
+              <div class="pub-content">
+                <h4>SustHack: Hackathons as a Model of Citizen Participation in Innovating for Sustainable Urban Development</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> M. O. Adisa, S. Oyedeji, S. L. Lau, T. Y. Sim, J. Porras &mdash; Citizen Participation in Sustainable Urban Development, Routledge, pp. 97&ndash;113</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">14.</div>
+              <div class="pub-content">
+                <h4>Trust-Aware Authentication and Authorization for IoT: A Federated Machine Learning Approach</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> K. I. Ahmed, M. Tahir, S. L. Lau, M. H. Habaebi, A. Ahad, A. Mughees &mdash; IEEE Internet of Things Journal, vol. 12, no. 8, pp. 9889&ndash;9904</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">15.</div>
+              <div class="pub-content">
+                <h4>Improving Accuracy in Deep Learning-Based Mushroom Image Classification Through Optimal Use of Classification Techniques</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> J. M. Kerta, A. H. Rangkuti, S. L. Lau, A. Kurniawan, M. Gabriela, A. Tandianto &mdash; JOIV: International Journal on Informatics Visualization, vol. 9, no. 3</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2024 ==================== -->
+          <div class="year-group" data-year="2024">
+            <div class="year-heading">2024 <span class="year-count">(9 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">16.</div>
+              <div class="pub-content">
+                <h4>A Data-Driven Framework for Assessing Government Readiness for Private Blockchain Adoption</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> S. V. Shunmugam, M. L. M. Kiah, S. R. B. Azzuhri, S. L. Lau &mdash; Malaysian Journal of Computer Science, vol. 37, no. 4, pp. 327&ndash;345</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">17.</div>
+              <div class="pub-content">
+                <h4>Introducing Process Simulation as an Alternative to Laboratory Session in Undergraduate Chemical Engineering Thermodynamics Course</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> Z. Y. Kong, A. A. Omar, S. L. Lau, J. Sunarso &mdash; Digital Chemical Engineering, vol. 12, p. 100167</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">18.</div>
+              <div class="pub-content">
+                <h4>Dataset for Authentication and Authorization Using Physical Layer Properties in Indoor Environment</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> K. I. Ahmed, M. Tahir, S. L. Lau, M. H. Habaebi, A. Ahad, I. M. Pires &mdash; Data in Brief, p. 110589</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">19.</div>
+              <div class="pub-content">
+                <h4>Phenomena Observed in Electron EBRT Using a Pulse-by-Pulse Radioluminescence Dosimetry System with Cloud-Based Analytics</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> A. Basaif, A. Oresegun, H. Zubair, H. Zin, K. Choo, S. L. Lau, Y.-Y. Wong, E. Lewis, H. Abdul-Rashid, D. Bradley &mdash; Radiation Physics and Chemistry, p. 111829</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">20.</div>
+              <div class="pub-content">
+                <h4>Semantic Liquid Spray Understanding with Computer-Generated Images</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> W. L. Lim, M. Y. Teow, R. T. Wong, R. K. Pathan, C. C. Ho, R. B. Koneru, P. Khare, L. Bravo, S. L. Lau &mdash; IEEE Access</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">21.</div>
+              <div class="pub-content">
+                <h4>Comparative Analysis of Banana Detection Models: Deep Learning and Darknet Algorithm</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> A. H. Rangkuti, V. A. Hasbi, S. L. Lau, R. Aryanto &mdash; International Journal of Electrical and Computer Engineering Systems, vol. 15, no. 4, pp. 355&ndash;367</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">22.</div>
+              <div class="pub-content">
+                <h4>Impact of Building Information Modelling and Advanced Technologies in the AEC Industry: A Contemporary Review and Future Directions</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> H. K. Biswas, T. Y. Sim, S. L. Lau &mdash; Journal of Building Engineering, vol. 82, p. 108165</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">23.</div>
+              <div class="pub-content">
+                <h4>Application of Unsupervised Anomaly Detection on Time Series Medical Radiation Data</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> Y.-Y. Wong, A. Basaif, A. Oresegun, H. Zubair, H. Zin, H. Abdul-Rashid, D. Bradley, S. L. Lau &mdash; IEEE ICOCO, pp. 24&ndash;30</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">24.</div>
+              <div class="pub-content">
+                <h4>Saliency-Based Explainable Artificial Intelligence (XAI) for Interpreting U-Net Semantic Segmentation of Synthetic Liquid Spray Images</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> T. W. Chin, S. L. Lau, R. T. K. Wong, L. Bravo, R. B. Koneru, P. Khare &mdash; IEEE ICOCO, pp. 331&ndash;336</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2023 ==================== -->
+          <div class="year-group" data-year="2023">
+            <div class="year-heading">2023 <span class="year-count">(9 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">25.</div>
+              <div class="pub-content">
+                <h4>Effectiveness of Hackathons to Cultivate a Sustainability Mindset Among Engineering and Computing Students</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, T. Y. Sim, M. O. Adisa, J. Porras &mdash; IEEE TALE, pp. 1&ndash;4</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">26.</div>
+              <div class="pub-content">
+                <h4>Computational Thinking Activities in High Schools to Enhance Interest and Skills in Programming</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> I. S. Ahmad, T. Y. Sim, C. A. Talib, S. L. Lau &mdash; IEEE TALE, pp. 1&ndash;8</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">27.</div>
+              <div class="pub-content">
+                <h4>Application of Computer Vision Techniques to Identify Spray Primary Breakup Structures in High-Speed Flow</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> R. K. Pathan, W. L. Lim, S. L. Lau, C. C. Ho, L. Bravo, R. B. Koneru, P. Khare &mdash; IEEE ICOCO, pp. 468&ndash;474</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">28.</div>
+              <div class="pub-content">
+                <h4>Performance Assessment of U-Net for Semantic Segmentation of Liquid Spray Images with Gaussian Blurring</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> W. L. Lim, M. Y. Teow, R. T. Wong, R. K. Pathan, S. L. Lau, C. C. Ho, L. Bravo, R. B. Koneru, P. Khare &mdash; IEEE ICOCO, pp. 462&ndash;467</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">29.</div>
+              <div class="pub-content">
+                <h4>Comparison of CNN Models for Optimizing Banana Image Classification</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. H. Rangkuti, S. L. Lau, V. A. Hasbi, F. H. Indallah, Ranny, R. Aryanto &mdash; IEEE ICOCO, pp. 456&ndash;461</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">30.</div>
+              <div class="pub-content">
+                <h4>Development of Banana Image Retrieval Based on Its Class Using the CNN Model and Image Distance</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. H. Rangkuti, S. L. Lau, V. A. Hasbi, F. H. Indallah, R. F. Rosyadah, R. Aryanto &mdash; IEEE ICOCO, pp. 426&ndash;431</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">31.</div>
+              <div class="pub-content">
+                <h4>An Empirical Study on Power Consumption of Decentralised Identity Management Systems</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. Y. Chan, S. L. Lau, J. Porras &mdash; IEEE ICOCO, pp. 289&ndash;294</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">32.</div>
+              <div class="pub-content">
+                <h4>Exploring Potential Drivers Influencing BIM Adoption in the AEC Industry: A Systematic Approach</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> H. K. Biswas, T. Y. Sim, S. L. Lau &mdash; IEEE ICOCO, pp. 124&ndash;129</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">33.</div>
+              <div class="pub-content">
+                <h4>SustHack: A Hackathon Approach for Engaging Citizens and Fostering a Sustainability Mindset</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. O. Adisa, S. Oyedeji, J. Porras, L. Abdullai, S. L. Lau &mdash; TKTP 2023</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2022 ==================== -->
+          <div class="year-group" data-year="2022">
+            <div class="year-heading">2022 <span class="year-count">(7 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">34.</div>
+              <div class="pub-content">
+                <h4>Breast Cancer Classification by Using Multi-Headed Convolutional Neural Network Modeling</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> R. K. Pathan, F. I. Alam, S. Yasmin, Z. Y. Hamd, H. Aljuaid, M. U. Khandaker, S. L. Lau &mdash; Healthcare, vol. 10, no. 12, p. 2367</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">35.</div>
+              <div class="pub-content">
+                <h4>Propagation Measurements and Modelling of Natural Tropical Caves</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> Q. P. Soo, S. Y. Lim, I. F. M. Rafie, D. W. G. Lim, K. M. Yap, S. L. Lau &mdash; Progress In Electromagnetics Research M, vol. 112, pp. 139&ndash;149</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">36.</div>
+              <div class="pub-content">
+                <h4>Exploring the Use of Speculative Design as a Participatory Approach to More Inclusive Policy-Identification and Development in Malaysia</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> E. Tsekleves, C. A. L. Lee, M. H. Yong, S. L. Lau &mdash; Design Studies, vol. 81, p. 101118</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">37.</div>
+              <div class="pub-content">
+                <h4>Impact of Digitalization in Construction: Enriching As-Built Facilities and Operations Using BIM</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> H. K. Biswas, S. L. Lau, T. Y. Sim &mdash; IEEE ICOCO, pp. 346&ndash;351</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">38.</div>
+              <div class="pub-content">
+                <h4>Experimental Analysis of U-Net and Mask R-CNN for Segmentation of Synthetic Liquid Spray</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> R. K. Pathan, W. L. Lim, S. L. Lau, C. C. Ho, P. Khare, R. B. Koneru &mdash; IEEE ICOCO, pp. 237&ndash;242</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">39.</div>
+              <div class="pub-content">
+                <h4>Review on Challenges and Solutions in Novice Programming Education</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> T. Y. Sim, S. L. Lau &mdash; IEEE ICOCO, pp. 55&ndash;61</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">40.</div>
+              <div class="pub-content">
+                <h4>Understanding Public Sentiment Towards a Public Rally Using Text and Social Media Analytic</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, M. Y. H. Lee, M. X. Teoh &mdash; IEEE ICOCO, pp. 16&ndash;20</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2021 ==================== -->
+          <div class="year-group" data-year="2021">
+            <div class="year-heading">2021 <span class="year-count">(7 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">41.</div>
+              <div class="pub-content">
+                <h4>Machine Learning for Authentication and Authorization in IoT: Taxonomy, Challenges and Future Research Direction</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> K. I. Ahmed, M. Tahir, M. H. Habaebi, S. L. Lau, A. Ahad &mdash; Sensors, vol. 21, no. 15</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">42.</div>
+              <div class="pub-content">
+                <h4>Unplugged Computational Thinking Activities Framework Development for Novice Programmer</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> T. Y. Sim, M. Teow, S. L. Lau &mdash; IEEE ICOCO, pp. 297&ndash;302</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">43.</div>
+              <div class="pub-content">
+                <h4>Positive Factors Influencing the Behavioural Intention to Use Mobile Wallets Among University Students</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> F. H. Al-Herwi, S. Munerah, S. L. Lau &mdash; IEEE ICOCO, pp. 303&ndash;308</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">44.</div>
+              <div class="pub-content">
+                <h4>Exploratory Investigation on a Naive Pseudo-labelling Technique for Liquid Droplet Images Detection using Semi-supervised Learning</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, J. Lew, C. C. Ho, S. Su &mdash; IEEE ICOCO, pp. 353&ndash;359</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">45.</div>
+              <div class="pub-content">
+                <h4>Student Feedback on Rapid Adaptation of Online Delivery Learning during the COVID-19 Pandemic</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> S. L. Lau, A. L. O. Ng, T. Y. Sim, A. Veerakumarasivam &mdash; Higher Education as an Enterprise, p. 169</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">46.</div>
+              <div class="pub-content">
+                <h4>Blockchain and AI Technology in the Industrial Internet of Things</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> S. K. Pani, S. L. Lau, X. Liu (Eds.) &mdash; IGI Global</p>
+              </div>
+              <div class="pub-type book">Edited Book</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">47.</div>
+              <div class="pub-content">
+                <h4>ImaginAging Malaysia: Bringing Participatory Speculative Design to Malaysia&rsquo;s Exploration of Healthy Ageing in Place</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> C. A. L. Lee, M. H. Yong, S. C. Lim, S. Giga, S. L. Lau, J. Johan, E. Tsekleves &mdash; Design for Global Challenges and Goals, Taylor &amp; Francis, ch. 12, pp. 155&ndash;169</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2020 ==================== -->
+          <div class="year-group" data-year="2020">
+            <div class="year-heading">2020 <span class="year-count">(5 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">48.</div>
+              <div class="pub-content">
+                <h4>Using Augmented Reality and Location-Awareness to Enhance Visitor Experience: A Case Study of a Theme Park App</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> C. M. Chan, S. L. Lau &mdash; IEEE GAME, pp. 49&ndash;54</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">49.</div>
+              <div class="pub-content">
+                <h4>Trust Management for IoT Security: Taxonomy and Future Research Directions</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> K. I. Ahmed, M. Tahir, S. L. Lau &mdash; IEEE AINS, pp. 26&ndash;31</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">50.</div>
+              <div class="pub-content">
+                <h4>Feedback of University Students on Online Delivery Learning During the COVID-19 Pandemic Period</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, T. Y. Sim &mdash; IEEE IC3e, pp. 13&ndash;18</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">51.</div>
+              <div class="pub-content">
+                <h4>An Investigation of Learning Analytics in an Online Video-Based Learning Platform</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> E. H. C. Sim, S. L. Lau &mdash; IEEE ICOS, pp. 64&ndash;69</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">52.</div>
+              <div class="pub-content">
+                <h4>Evaluation of a Design Thinking MOOC: A Preliminary Investigation</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> T. Y. Sim, S. L. Lau &mdash; IEEE IC3e, pp. 7&ndash;12</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2019 ==================== -->
+          <div class="year-group" data-year="2019">
+            <div class="year-heading">2019 <span class="year-count">(8 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">53.</div>
+              <div class="pub-content">
+                <h4>Review on Security of Internet of Things Authentication Mechanism</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> T. Nandy, M. Y. I. B. Idris, R. Md Noor, L. Mat Kiah, S. L. Lau, N. B. Annuar Jumaat, I. Ahmedy, N. Abdul Ghani, S. Bhattacharyya &mdash; IEEE Access, vol. 7, pp. 151054&ndash;151089</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">54.</div>
+              <div class="pub-content">
+                <h4>Compilation of Malay Criminological Terms from Online News</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> J. C. L. Lee, P. L. Teh, S. L. Lau, I. Pak &mdash; Indonesian Journal of Electrical Engineering and Computer Science, vol. 15, no. 1, pp. 355&ndash;364</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">55.</div>
+              <div class="pub-content">
+                <h4>FR-IQA &mdash; Permutation Entropy Deviation Index</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. Baqar, S. L. Lau, M. Ebrahim &mdash; IEEE VCIP, pp. 1&ndash;4</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">56.</div>
+              <div class="pub-content">
+                <h4>GMSD-Based Perceptually Motivated Non-Local Means Filter for Image Denoising</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. Baqar, S. L. Lau, M. Ebrahim &mdash; IEEE HAVE, pp. 1&ndash;6</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">57.</div>
+              <div class="pub-content">
+                <h4>Measurement of an Uneven Terrain Model for Potential Applications in Caves</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> Q. P. Soo, S. Y. Lim, D. W. G. Lim, N. Rusli, K. H. Chong, K. M. Yap, S. L. Lau &mdash; IEEE APACE, pp. 1&ndash;3</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">58.</div>
+              <div class="pub-content">
+                <h4>Rethinking How Healthcare is Conceptualised and Delivered Through Speculative Design in the UK and Malaysia</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> E. Tsekleves, M. H. Yong, C. A. L. Lee, S. I. Giga, J. S. Hwang, S. L. Lau &mdash; EAD19</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">59.</div>
+              <div class="pub-content">
+                <h4>Weight-Adjustable Ranking for Keyword Search in Relational Databases</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> C. Jou, S. L. Lau &mdash; Intelligent and Interactive Computing, Springer, pp. 45&ndash;57</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">60.</div>
+              <div class="pub-content">
+                <h4>Recognition of Eye Movements Based on EEG Signals and the SAX Algorithm</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> S. P. Murutha Muthu, S. L. Lau, C. Jou &mdash; Intelligent and Interactive Computing, Springer, pp. 237&ndash;247</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2018 ==================== -->
+          <div class="year-group" data-year="2018">
+            <div class="year-heading">2018 <span class="year-count">(3 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">61.</div>
+              <div class="pub-content">
+                <h4>Propagation Measurement of a Natural Cave-Turned-Wine-Cellar</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> Q. P. Soo, S. Y. Lim, D. W. G. Lim, K. M. Yap, S. L. Lau &mdash; IEEE Antennas and Wireless Propagation Letters, vol. 17, no. 5, pp. 743&ndash;746</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">62.</div>
+              <div class="pub-content">
+                <h4>Online Tools to Support Novice Programming: A Systematic Review</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> T. Y. Sim, S. L. Lau &mdash; IEEE IC3e, pp. 91&ndash;96</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">63.</div>
+              <div class="pub-content">
+                <h4>Imagining the Future of Foods Through Speculative Design</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> C. A. L. Lee, S. L. Lau &mdash; ICCT, pp. 256&ndash;261</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2017 ==================== -->
+          <div class="year-group" data-year="2017">
+            <div class="year-heading">2017 <span class="year-count">(2 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">64.</div>
+              <div class="pub-content">
+                <h4>Feature Selection for Activity Recognition from Smartphone Accelerometer Data</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> J. C. Quiroz, A. Banerjee, S. M. Dascalu, S. L. Lau &mdash; Intelligent Automation &amp; Soft Computing, vol. 23, pp. 1&ndash;9</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">65.</div>
+              <div class="pub-content">
+                <h4>An Activity History Based Approach for Recognizing the Mode of Transportation</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. Jahn, D. Kroll, S. L. Lau, K. David &mdash; IEEE ICOS</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2016 ==================== -->
+          <div class="year-group" data-year="2016">
+            <div class="year-heading">2016 <span class="year-count">(7 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">66.</div>
+              <div class="pub-content">
+                <h4>Towards the Design of a Mobile Cataract Screening Smartphone App</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> Z. Q. Ik, S. L. Lau, J. B. Chan &mdash; Jurnal Teknologi, vol. 78, no. 12-3, pp. 111&ndash;120</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">67.</div>
+              <div class="pub-content">
+                <h4>Greater Kuala Lumpur as a Smart City: A Case Study on Technology Opportunities</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> K.-L. A. Yau, S. L. Lau, H. N. Chua, M. H. Ling, V. Iranmanesh, S. C. C. Kwan &mdash; IEEE KST, pp. 96&ndash;101</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">68.</div>
+              <div class="pub-content">
+                <h4>Wi-Fi Fingerprint Localisation using Density-based Clustering for Public Spaces</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, C. Toh, Y. Saleem &mdash; IEEE Confluence</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">69.</div>
+              <div class="pub-content">
+                <h4>Proposing a Sensor Fusion Technique Utilizing Depth and Ranging Sensors for Combined Human Following and Indoor Robot Navigation</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. T. K. Tsun, L. B. Theng, H. S. Jo, S. L. Lau &mdash; ACM ICNCC, pp. 331&ndash;335</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">70.</div>
+              <div class="pub-content">
+                <h4>Indoor Positioning using Existing Wi-Fi Infrastructure: A Case Study at a University Building</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> C. Toh, S. L. Lau &mdash; IEEE VSMM</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">71.</div>
+              <div class="pub-content">
+                <h4>A Study on Cloud-based Backend for Crowd-sourced Sensor Data Collection Apps</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> D. J. M. R. Tan, G. W. T. Yam, S. L. Lau &mdash; IEEE IC3e</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">72.</div>
+              <div class="pub-content">
+                <h4>Potential of Human Tracking in Assistive Technologies for Children with Cognitive Disabilities</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> M. K. T. Tee, B. T. Lau, H. S. Jo, S. L. Lau &mdash; Supporting the Education of Children with ASD, IGI Global, ch. 13, pp. 245&ndash;266</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2015 ==================== -->
+          <div class="year-group" data-year="2015">
+            <div class="year-heading">2015 <span class="year-count">(7 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">73.</div>
+              <div class="pub-content">
+                <h4>Towards a Real-Time Public Transport Data Framework Using Crowd-Sourced Passenger Contributed Data</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, S. M. S. Ismail &mdash; MOCS Workshop</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">74.</div>
+              <div class="pub-content">
+                <h4>Evaluation of Unsupervised Indoor Localisation Algorithm Using Real-Environment Data</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> K. Y. Tey, S. L. Lau &mdash; IEEE ICWiSE, pp. 40&ndash;45</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">75.</div>
+              <div class="pub-content">
+                <h4>Mobile Cataract Screening App Using a Smartphone</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> Z. Q. Ik, S. L. Lau, J. B. Chan &mdash; IEEE IC3e</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">76.</div>
+              <div class="pub-content">
+                <h4>Web-based Interactive Form Generator for Public Kiosks</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. Negametzyanov, S. L. Lau, C. F. Ng &mdash; IEEE ICOS</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">77.</div>
+              <div class="pub-content">
+                <h4>A Robotic Telepresence System for Full-Time Monitoring of Children with Cognitive Disabilities</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. K. T. Tee, B. T. Lau, H. S. Jo, S. L. Lau &mdash; i-CREATe</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">78.</div>
+              <div class="pub-content">
+                <h4>A Human Orientation Tracking System using Template Matching and Active Infrared Marker</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> M. K. T. Tee, B. T. Lau, H. S. Jo, S. L. Lau &mdash; ICSSA</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">79.</div>
+              <div class="pub-content">
+                <h4>A Review for Unobtrusive COTS EEG-Based Assistive Technology</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> S. L. Lau, A. Ahmed, Z. Ruslan &mdash; Assistive Technologies for Physical and Cognitive Disabilities, IGI Global, ch. 13, pp. 262&ndash;277</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2014 ==================== -->
+          <div class="year-group" data-year="2014">
+            <div class="year-heading">2014 <span class="year-count">(4 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">80.</div>
+              <div class="pub-content">
+                <h4>Design and Development of a Supported Tiered Software for Teaching and Learning Using a Connected Mobile Learning Application</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> T. Y. Sim, S. L. Lau, P. Zipf, K. Kimm &mdash; World Applied Sciences Journal, vol. 30, pp. 247&ndash;255</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">81.</div>
+              <div class="pub-content">
+                <h4>Towards a Smart City: The Case of Greater Kuala Lumpur in Malaysia</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. K.-L. Yau, S. L. Lau, M. Q. L. Wong, M. S. Abdul Rahman &mdash; IET ICFCNA</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">82.</div>
+              <div class="pub-content">
+                <h4>Towards an Unobtrusive COTS EEG-based Assistive Technology for Patients with Movement Disabilities: A Review</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, A. Ahmed, R. Zhunussov &mdash; SDPS, pp. 457&ndash;463</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">83.</div>
+              <div class="pub-content">
+                <h4>3rd Workshop on Recent Advances in Behavior Prediction and Pro-Active Pervasive Computing</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> K. David, S. Sigg, R. Kusber, B. Ziebart, S. L. Lau &mdash; ACM UbiComp Adjunct, pp. 415&ndash;420</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2013 ==================== -->
+          <div class="year-group" data-year="2013">
+            <div class="year-heading">2013 <span class="year-count">(5 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">84.</div>
+              <div class="pub-content">
+                <h4>DCCLA: Automatic Indoor Localization Using Unsupervised Wi-Fi Fingerprinting</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> Y. Xu, S. L. Lau, R. Kusber, K. David &mdash; LNCS, vol. 8175, Springer, pp. 73&ndash;86</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">85.</div>
+              <div class="pub-content">
+                <h4>Comparison of Orientation-Independent-Based Movement Recognition System Using Classification Algorithms</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau &mdash; IEEE ISWTA, pp. 322&ndash;326</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">86.</div>
+              <div class="pub-content">
+                <h4>Investigation and Compensation of the Magnetic Deviation on a Magnetometer of a Smartphone Caused by a Vehicle</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. Q. Memon, S. L. Lau, K. David &mdash; IEEE VTC Fall, pp. 1&ndash;5</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">87.</div>
+              <div class="pub-content">
+                <h4>Design and Development of a Supported Tiered Software for Teaching and Learning Using a Connected Mobile Learning Application</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> T. Y. Sim, S. L. Lau, P. Zipf, K. Kimm &mdash; ICMRP</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">88.</div>
+              <div class="pub-content">
+                <h4>2nd Workshop on Recent Advances in Behavior Prediction and Pro-Active Pervasive Computing</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> K. David, B. N. Klein, S. L. Lau, S. Sigg, B. Ziebart &mdash; ACM UbiComp Adjunct, pp. 435&ndash;440</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2012 ==================== -->
+          <div class="year-group" data-year="2012">
+            <div class="year-heading">2012 <span class="year-count">(4 papers)</span></div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">89.</div>
+              <div class="pub-content">
+                <h4>Towards a User-Centric Context Aware System: Empowering Users Through Activity Recognition Using a Smartphone as an Unobtrusive Device</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> S. L. Lau &mdash; Doctoral Thesis, Kassel University Press</p>
+              </div>
+              <div class="pub-type book">Thesis</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">90.</div>
+              <div class="pub-content">
+                <h4>Hybrid Modeling for Energy Saving in Subway Stations</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> R. Ansuini, R. Larghetti, M. Vaccarini, A. Carbonari, A. Giretti, M. Lemma, H. Guo, S. L. Lau &mdash; BSO12, Loughborough</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">91.</div>
+              <div class="pub-content">
+                <h4>Evaluation of a Collaborative-Based Filter Technique to Proactively Detect Pedestrians at Risk</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> C. Voigtmann, S. L. Lau, K. David &mdash; IEEE VTC Fall, Quebec City</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">92.</div>
+              <div class="pub-content">
+                <h4>An Experimental Investigation of Indoor Localization by Unsupervised Wi-Fi Signal Clustering</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> Y. Xu, S. L. Lau, R. Kusber, K. David &mdash; Future Network and Mobile Summit, Berlin, pp. 1&ndash;8</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2011 ==================== -->
+          <div class="year-group" data-year="2011">
+            <div class="year-heading">2011 <span class="year-count">(7 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">93.</div>
+              <div class="pub-content">
+                <h4>Social Link App &mdash; A New Communication Paradigm Empowering Mobile Users</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> K. David, S. L. Lau, B. N. Klein &mdash; IEEE Vehicular Technology Magazine, vol. 6, no. 3, pp. 80&ndash;87</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">94.</div>
+              <div class="pub-content">
+                <h4>Evaluation of the Influence of Time Synchronisation on Classification Learning Based Movement Detection with Accelerometers</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> N. Klein, S. L. Lau, K. David &mdash; IEEE SAINT, Munich</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">95.</div>
+              <div class="pub-content">
+                <h4>Novel Indoor Localisation using an Unsupervised Wi-Fi Signal Clustering Method</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, Y. Xu, K. David &mdash; Future Network and Mobile Summit, Warsaw, pp. 1&ndash;8</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">96.</div>
+              <div class="pub-content">
+                <h4>A Collaborative Context Prediction Technique</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> C. Voigtmann, S. L. Lau, K. David &mdash; IEEE VTC Spring, Budapest, pp. 1&ndash;5</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">97.</div>
+              <div class="pub-content">
+                <h4>Pedestrian Movement Recognition for Radio Based Collision Avoidance: A Performance Analysis</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. Flach, A. Q. Memon, S. L. Lau, K. David &mdash; IEEE VTC Spring, Budapest, pp. 1&ndash;5</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">98.</div>
+              <div class="pub-content">
+                <h4>An Approach to Collaborative Context Prediction</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> C. Voigtmann, S. L. Lau, K. David &mdash; IEEE PERCOM Workshops, Seattle, pp. 403&ndash;408</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">99.</div>
+              <div class="pub-content">
+                <h4>Enabling Context Aware Services in the Area of AAC</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> S. L. Lau, K. David &mdash; IGI Global, ch. 6, pp. 159&ndash;192</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2010 ==================== -->
+          <div class="year-group" data-year="2010">
+            <div class="year-heading">2010 <span class="year-count">(5 papers)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">100.</div>
+              <div class="pub-content">
+                <h4>Evaluation of the Technology Agnostic Service Creation Approach</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> S. L. Lau, N. Klein, A. Pirali, O. Droegehorn, K. David &mdash; ECEASST, vol. 27</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">101.</div>
+              <div class="pub-content">
+                <h4>MATRIX-Middleware f&uuml;r die Realisierung internet-basierter telemedizinischer Dienste</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> B. Parandian, K. Dewitz, M. Schultz, C. Carius-Duessel, S. L. Lau, I. Koenig, K. David, M. Maaser, S. Ortmann &mdash; Fachkongress Telemedizin, Berlin</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">102.</div>
+              <div class="pub-content">
+                <h4>Supporting Patient Monitoring Using Activity Recognition with a Smartphone</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, I. Koenig, K. David, B. Parandian, C. Carius-Duessel, M. Schultz &mdash; IEEE ISWCS, pp. 810&ndash;814</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">103.</div>
+              <div class="pub-content">
+                <h4>Movement Recognition Using the Accelerometer in Smartphones</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, K. David &mdash; Future Network and Mobile Summit, Florence, pp. 1&ndash;9</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">104.</div>
+              <div class="pub-content">
+                <h4>The Context Sensitive Shopping List</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> A. Pirali, N. Klein, S. L. Lau, K. David &mdash; MKWI, G&ouml;ttingen, pp. 987&ndash;997</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2009 ==================== -->
+          <div class="year-group" data-year="2009">
+            <div class="year-heading">2009 <span class="year-count">(1 paper)</span></div>
+
+            <div class="pub-item" data-type="journal">
+              <div class="pub-number">105.</div>
+              <div class="pub-content">
+                <h4>Implementation of a User-Centric Context-Aware Playground</h4>
+                <p class="pub-venue"><i class="fa-solid fa-journal-whills"></i> S. L. Lau, N. Klein, A. Pirali, I. Koenig, K. David &mdash; ECEASST, vol. 17</p>
+              </div>
+              <div class="pub-type journal">Journal</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2008 ==================== -->
+          <div class="year-group" data-year="2008">
+            <div class="year-heading">2008 <span class="year-count">(3 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">106.</div>
+              <div class="pub-content">
+                <h4>DAGR &mdash; DAG Based Context Reasoning: An Architecture for Context Aware Applications</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> B. N. Klein, S. L. Lau, A. Pirali, T. Loeffler, K. David &mdash; IEEE ASWN, pp. 20&ndash;25</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">107.</div>
+              <div class="pub-content">
+                <h4>Service Creation for End-Users</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> O. Droegehorn, S. L. Lau, N. Klein, I. Koenig, J. Porras &mdash; IEEE PIMRC, pp. 1&ndash;5</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">108.</div>
+              <div class="pub-content">
+                <h4>Making Service Creation for (Almost) Everyone</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, N. Klein, A. Pirali, I. Koenig, O. Droegehorn, K. David &mdash; ICT-Mobile Summit, Stockholm</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2007 ==================== -->
+          <div class="year-group" data-year="2007">
+            <div class="year-heading">2007 <span class="year-count">(5 papers)</span></div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">109.</div>
+              <div class="pub-content">
+                <h4>Privacy, Trust and Group Communications</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> S. Campadello, O. Coutand, P. E. R. van Eijk, J. Hjelm et al. &mdash; Enabling Technologies for Mobile Services: The MobiLife Book, Wiley, ch. 6</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">110.</div>
+              <div class="pub-content">
+                <h4>Multimodality and Personalisation</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> D. Bonnefoy, M. Boussard, N. Brgulja et al. &mdash; The MobiLife Book, Wiley, ch. 5</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+
+            <div class="pub-item" data-type="book">
+              <div class="pub-number">111.</div>
+              <div class="pub-content">
+                <h4>Context Awareness and Management</h4>
+                <p class="pub-venue"><i class="fa-solid fa-book"></i> A. Battestini, A. Flanagan, P. Floreen et al. &mdash; The MobiLife Book, Wiley, ch. 4</p>
+              </div>
+              <div class="pub-type book">Book Chapter</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">112.</div>
+              <div class="pub-content">
+                <h4>Approaching a Definition of Context Prediction</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. Sigg, S. L. Lau, S. Haseloff, K. David &mdash; CAPS07, Guildford</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">113.</div>
+              <div class="pub-content">
+                <h4>Integrating Expert Knowledge into Context Reasoning in Context-Aware Environment</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> S. L. Lau, J. Millerat, M. Sutterer, N. Brgulja, O. Coutand, O. Droegehorn, K. David &mdash; ASWN, Santander</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2006 ==================== -->
+          <div class="year-group" data-year="2006">
+            <div class="year-heading">2006 <span class="year-count">(6 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">114.</div>
+              <div class="pub-content">
+                <h4>A System for Context-Dependent User Modeling</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> P. Nurmi, A. H. Salden, S. L. Lau, J. Suomela et al. &mdash; OTM Workshops, LNCS 4278, Springer, pp. 1894&ndash;1903</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">115.</div>
+              <div class="pub-content">
+                <h4>A CBR Approach for Personalizing Location-Aware Services</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> O. Coutand, S. Haseloff, S. L. Lau, K. David &mdash; CACOA Workshop</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">116.</div>
+              <div class="pub-content">
+                <h4>Interpreting Group Context for Personalized Mobile Services</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> O. Coutand, S. L. Lau, R. Haensel, O. Droegehorn, K. David &mdash; IST Mobile Summit, Mykonos</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">117.</div>
+              <div class="pub-content">
+                <h4>User Profile Management for Personalizing Services in Pervasive Computing</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> O. Coutand, M. Sutterer, S. L. Lau, O. Droegehorn, K. David &mdash; ASWN, Berlin</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">118.</div>
+              <div class="pub-content">
+                <h4>Proxy Pattern and Publish/Subscribe: An Incompatible Combination?</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> B. Wuest, S. L. Lau, O. Droegehorn, K. David &mdash; European Wireless, pp. 1&ndash;6</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">119.</div>
+              <div class="pub-content">
+                <h4>Determining the Behavior of Mobile Location-Aware Services Based on User Action History</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> O. Coutand, S. L. Lau, K. David &mdash; SAKS, Kassel</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+          <!-- ==================== 2005 ==================== -->
+          <div class="year-group" data-year="2005">
+            <div class="year-heading">2005 <span class="year-count">(2 papers)</span></div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">120.</div>
+              <div class="pub-content">
+                <h4>Context Awareness in I-Centric Systems &mdash; Dynamic Context Learning Using a Rule-Based Approach</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> O. Droegehorn, S. Haseloff, T. Loeffler, W. Dargie, S. L. Lau, K. David &mdash; IEEE ISSNIP, pp. 211&ndash;216</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+
+            <div class="pub-item" data-type="conference">
+              <div class="pub-number">121.</div>
+              <div class="pub-content">
+                <h4>Towards a Context Management Framework for MobiLife</h4>
+                <p class="pub-venue"><i class="fa-solid fa-file-lines"></i> P. Floreen, M. Przybilski, P. Nurmi, J. Koolwaaij et al. &mdash; IST Mobile Summit</p>
+              </div>
+              <div class="pub-type conference">Conference</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Download & External links -->
+        <div class="pub-links pub-page-footer">
+          <a href="assets/pdf/Publication_List.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-file-pdf"></i> Download by Year (PDF)
+          </a>
+          <a href="assets/pdf/Publication_List_Type.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-file-pdf"></i> Download by Type (PDF)
+          </a>
+          <a href="https://scholar.google.com/citations?user=kYEKv3oAAAAJ" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+          </a>
+          <a href="https://dblp.org/pid/54/2327.html" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-solid fa-database"></i> DBLP
+          </a>
+          <a href="https://www.researchgate.net/profile/Sian-Lun-Lau" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-brands fa-researchgate"></i> ResearchGate
+          </a>
+          <a href="https://ieeexplore.ieee.org/author/37588856700" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-solid fa-microchip"></i> IEEE Xplore
+          </a>
+        </div>
+        <p style="text-align:center;color:var(--text-muted);font-size:0.78rem;margin-top:0.75rem;">Publication lists updated 30 June 2026</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">Sian Lun Lau</span>
+        <span class="footer-title">Professor &middot; Sunway University</span>
+      </div>
+      <div class="footer-social">
+        <a href="https://scholar.google.com/citations?user=kYEKv3oAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+        <a href="https://www.researchgate.net/profile/Sian-Lun-Lau" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+        <a href="https://www.linkedin.com/in/sianlun/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/sianlun" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://sianlun.wordpress.com" target="_blank" rel="noopener" aria-label="Blog"><i class="fa-brands fa-wordpress"></i></a>
+        <a href="mailto:sianlun@ieee.org" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 Sian Lun Lau &nbsp;&middot;&nbsp; Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Filter and theme scripts -->
+  <script>
+    // Theme toggle (reuse from main.js pattern)
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var moonIcon = document.getElementById('theme-icon-moon');
+      var sunIcon = document.getElementById('theme-icon-sun');
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = '';
+      }
+      toggle.addEventListener('click', function() {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+          moonIcon.style.display = '';
+          sunIcon.style.display = 'none';
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          moonIcon.style.display = 'none';
+          sunIcon.style.display = '';
+        }
+      });
+    })();
+
+    // Publication filter
+    (function() {
+      var buttons = document.querySelectorAll('.pub-filter-btn');
+      var items = document.querySelectorAll('.pub-item');
+      var yearGroups = document.querySelectorAll('.year-group');
+
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          buttons.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var filter = btn.getAttribute('data-filter');
+
+          yearGroups.forEach(function(group) {
+            var visibleCount = 0;
+            var groupItems = group.querySelectorAll('.pub-item');
+            groupItems.forEach(function(item) {
+              if (filter === 'all' || item.getAttribute('data-type') === filter) {
+                item.style.display = '';
+                visibleCount++;
+              } else {
+                item.style.display = 'none';
+              }
+            });
+            group.style.display = visibleCount > 0 ? '' : 'none';
+          });
+
+          // Update counts
+          var total = 0, journals = 0, conferences = 0, books = 0;
+          items.forEach(function(item) {
+            if (item.style.display !== 'none') {
+              total++;
+              var t = item.getAttribute('data-type');
+              if (t === 'journal') journals++;
+              else if (t === 'conference') conferences++;
+              else if (t === 'book') books++;
+            }
+          });
+        });
+      });
+
+      // Navbar scroll effect
+      var navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 30) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+
+      // Scroll progress bar
+      var progressBar = document.getElementById('progress-bar');
+      window.addEventListener('scroll', function() {
+        var h = document.documentElement;
+        var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        progressBar.style.width = pct + '%';
+      });
+    })();
+  </script>
+</body>
+</html>

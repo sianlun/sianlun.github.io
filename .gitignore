@@ -10,7 +10,8 @@
 
 # Document submissions (not part of the website)
 *.docx
-*.pdf
+# PDFs in root only (assets/pdf/ is tracked)
+/*.pdf
 
 # Editor files
 *.swp
