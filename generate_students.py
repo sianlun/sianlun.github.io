@@ -53,6 +53,14 @@ def render_card(s):
     lines = []
     lines.append(f'      <div class="student-card" id="{s["id"]}">')
     lines.append(f'        <div class="student-card-header">')
+    if s.get("photo"):
+        lines.append(
+            f'          <img class="student-photo" src="{s["photo"]}" alt="{s["name"]}" loading="lazy" />'
+        )
+    else:
+        lines.append(
+            f'          <div class="student-photo-placeholder"><i class="fa-solid fa-user"></i></div>'
+        )
     lines.append(f'          <div>')
     lines.append(f'            <div class="student-name">{s["name"]}</div>')
     lines.append(
@@ -201,7 +209,9 @@ def generate_html(students):
     .degree-msc {{ background: var(--warm-soft); color: var(--warm); border: 1px solid var(--warm-border); }}
     .student-card {{ background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; transition: box-shadow 0.3s, border-color 0.3s; }}
     .student-card:hover {{ box-shadow: var(--card-shadow-hover); border-color: var(--accent-soft-border); }}
-    .student-card-header {{ display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }}
+    .student-card-header {{ display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }}
+    .student-photo {{ width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--border-color); }}
+    .student-photo-placeholder {{ width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0; background: var(--bg-secondary); border: 2px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 1.2rem; }}
     .student-name {{ font-size: 1.1rem; font-weight: 700; margin-bottom: 0.15rem; }}
     .student-role {{ font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }}
     .student-role .role-main {{ color: var(--accent); }}

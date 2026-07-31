@@ -35,7 +35,9 @@
     .degree-msc { background: var(--warm-soft); color: var(--warm); border: 1px solid var(--warm-border); }
     .student-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; transition: box-shadow 0.3s, border-color 0.3s; }
     .student-card:hover { box-shadow: var(--card-shadow-hover); border-color: var(--accent-soft-border); }
-    .student-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .student-card-header { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .student-photo { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--border-color); }
+    .student-photo-placeholder { width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0; background: var(--bg-secondary); border: 2px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 1.2rem; }
     .student-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.15rem; }
     .student-role { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
     .student-role .role-main { color: var(--accent); }
@@ -98,52 +100,19 @@
       <h1>Students &amp; Alumni</h1>
       <p>Throughout my academic career, I am blessed with bright students who trusted me by choosing me as their supervisor.</p>
       <div class="students-stats">
-        <div class="students-stat"><div class="students-stat-number">8</div><div class="students-stat-label">PhD</div></div>
-        <div class="students-stat"><div class="students-stat-number">4</div><div class="students-stat-label">Master</div></div>
-        <div class="students-stat"><div class="students-stat-number">12</div><div class="students-stat-label">Total Current</div></div>
+        <div class="students-stat"><div class="students-stat-number">3</div><div class="students-stat-label">PhD</div></div>
+        <div class="students-stat"><div class="students-stat-number">2</div><div class="students-stat-label">Master</div></div>
+        <div class="students-stat"><div class="students-stat-number">5</div><div class="students-stat-label">Total Current</div></div>
+        <div class="students-stat"><div class="students-stat-number">6</div><div class="students-stat-label">Alumni</div></div>
       </div>
     </div>
 
     <section class="students-section" id="phd">
       <h2 class="students-section-title"><span class="degree-badge degree-phd">PhD</span> Doctoral Researchers</h2>
 
-      <div class="student-card" id="kazi-istiaque">
-        <div class="student-card-header">
-          <div>
-            <div class="student-name">Kazi Istiaque Ahmed</div>
-            <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
-          </div>
-        </div>
-        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Researcher, Northwestern Polytechnical University, China</div>
-        <div class="student-research">Machine Learning based Hybrid Trust Management Scheme for Authentication and Authorization in IoT</div>
-        <div class="student-focus">Investigating IoT security issues in Authentication and Authorization, proposing a holistic multilevel Distributed Trust Management scheme using Federated Machine Learning.</div>
-        <div class="student-meta">
-          <span class="student-meta-tag meta-funding"><i class="fa-solid fa-coins"></i> Sunway University Studentship Scheme</span>
-        </div>
-        <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Dr. Mohammad Tahir (University of Turku, Finland), Prof. Dr. Mohamed Hadi Habaebi (IIUM)</div>
-        <div class="student-links">
-          <a href="https://scholar.google.com/citations?user=YEegdJwAAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-        </div>
-      </div>
-
-      <div class="student-card" id="humayun-biswas">
-        <div class="student-card-header">
-          <div>
-            <div class="student-name">Md Humayun Kabir Biswas</div>
-            <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
-          </div>
-        </div>
-        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Lecturer, Faculty of Engineering and Technology, Sunway University</div>
-        <div class="student-research">A Conceptual Framework of BIM Adoption for Existing Buildings in the AEC Industry</div>
-        <div class="student-focus">Exploring BIM adoption for existing buildings in the AEC industry, examining implementation and validation approaches among construction practitioners.</div>
-        <div class="student-meta">
-          <span class="student-meta-tag meta-funding"><i class="fa-solid fa-coins"></i> Sunway University Studentship Scheme</span>
-        </div>
-        <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Assoc. Prof. Dr. Tze Ying Sim (Sunway University)</div>
-      </div>
-
       <div class="student-card" id="lim-wei-lun">
         <div class="student-card-header">
+          <img class="student-photo" src="https://sianlun.wordpress.com/wp-content/uploads/2023/08/weilun.jpg" alt="Lim Wei Lun (Lyner)" loading="lazy" />
           <div>
             <div class="student-name">Lim Wei Lun (Lyner)</div>
             <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
@@ -161,6 +130,7 @@
 
       <div class="student-card" id="augusta-lee">
         <div class="student-card-header">
+          <img class="student-photo" src="https://sianlun.wordpress.com/wp-content/uploads/2023/08/augusta.jpg" alt="Augusta Lee Chee Sing" loading="lazy" />
           <div>
             <div class="student-name">Augusta Lee Chee Sing</div>
             <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Sustainable Development</div>
@@ -174,48 +144,15 @@
         <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Prof. Fun Woh Peng (Sunway University)</div>
       </div>
 
-      <div class="student-card" id="mohtashim-baqar">
-        <div class="student-card-header">
-          <div>
-            <div class="student-name">Mohtashim Baqar</div>
-            <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
-          </div>
-        </div>
-        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Lecturer, Melbourne Institute of Technology, Australia</div>
-        <div class="student-research">Full-Reference Image Quality Assessment</div>
-        <div class="student-focus">Research on perceptual image quality assessment, permutation entropy-based features, and non-local means filtering.</div>
-        <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Dr. Mansoor Ebrahim (Iqra University, Pakistan)</div>
-      </div>
-
-      <div class="student-card" id="shubham-verma">
-        <div class="student-card-header">
-          <div>
-            <div class="student-name">Shubham Verma</div>
-            <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
-          </div>
-        </div>
-        <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Prof. Mohammad Khalid (Sunway University), Dr. Saad Aslam (Sunway University), Assoc. Prof. Rafael Gomez-Bombarelli (MIT)</div>
-      </div>
-
       <div class="student-card" id="sivamohan">
         <div class="student-card-header">
+          <div class="student-photo-placeholder"><i class="fa-solid fa-user"></i></div>
           <div>
             <div class="student-name">Sivamohan A/L V Shunmugam</div>
             <div class="student-role"><span class="role-co">Co-Supervisor</span> &middot; PhD</div>
           </div>
         </div>
         <div class="student-cosupervisors"><strong>Main supervisor:</strong> Prof. Miss Laiha Mat Kiah (University Malaya)</div>
-      </div>
-
-      <div class="student-card" id="meera-eeswaran">
-        <div class="student-card-header">
-          <div>
-            <div class="student-name">Dr. Meera Eeswaran</div>
-            <div class="student-role"><span class="role-co">Co-Supervisor</span> &middot; PhD</div>
-          </div>
-        </div>
-        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Senior Lecturer, School of Accounting and Finance, Asia Pacific University of Technology & Innovation</div>
-        <div class="student-cosupervisors"><strong>Main supervisor:</strong> Prof. Susela Devi (Sunway University Business School)</div>
       </div>
     </section>
 
@@ -224,6 +161,7 @@
 
       <div class="student-card" id="wong-yuen-yi">
         <div class="student-card-header">
+          <img class="student-photo" src="https://sianlun.wordpress.com/wp-content/uploads/2023/08/yuenyi-edited.jpg" alt="Wong Yuen-Yi" loading="lazy" />
           <div>
             <div class="student-name">Wong Yuen-Yi</div>
             <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; MSc in Computer Science (by Research)</div>
@@ -240,6 +178,7 @@
 
       <div class="student-card" id="refat-pathan">
         <div class="student-card-header">
+          <img class="student-photo" src="https://sianlun.wordpress.com/wp-content/uploads/2023/08/refat.jpg" alt="Md Refat Khan Pathan" loading="lazy" />
           <div>
             <div class="student-name">Md Refat Khan Pathan</div>
             <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; MSc in Computer Science (by Research)</div>
@@ -253,9 +192,77 @@
         </div>
         <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Dr. Peter Ho (Sunway University), Prof. Mayeen Uddin Khandaker (Sunway University)</div>
       </div>
+    </section>
+
+    <section class="students-section" id="alumni">
+      <h2 class="students-section-title"><i class="fa-solid fa-award" style="color:var(--warm);"></i> Alumni</h2>
+
+      <div class="student-card" id="kazi-istiaque">
+        <div class="student-card-header">
+          <img class="student-photo" src="https://sianlun.wordpress.com/wp-content/uploads/2023/08/kazi.png" alt="Dr. Kazi Istiaque Ahmed" loading="lazy" />
+          <div>
+            <div class="student-name">Dr. Kazi Istiaque Ahmed</div>
+            <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
+          </div>
+        </div>
+        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Researcher, Northwestern Polytechnical University, China</div>
+        <div class="student-research">Machine Learning based Hybrid Trust Management Scheme for Authentication and Authorization in IoT</div>
+        <div class="student-focus">Investigating IoT security issues in Authentication and Authorization, proposing a holistic multilevel Distributed Trust Management scheme using Federated Machine Learning.</div>
+        <div class="student-meta">
+          <span class="student-meta-tag meta-funding"><i class="fa-solid fa-coins"></i> Sunway University Studentship Scheme</span>
+        </div>
+        <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Dr. Mohammad Tahir (University of Turku, Finland), Prof. Dr. Mohamed Hadi Habaebi (IIUM)</div>
+        <div class="student-links">
+          <a href="https://scholar.google.com/citations?user=YEegdJwAAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+        </div>
+      </div>
+
+      <div class="student-card" id="humayun-biswas">
+        <div class="student-card-header">
+          <img class="student-photo" src="https://sianlun.wordpress.com/wp-content/uploads/2023/08/humayun.jpg" alt="Dr. Md Humayun Kabir Biswas" loading="lazy" />
+          <div>
+            <div class="student-name">Dr. Md Humayun Kabir Biswas</div>
+            <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
+          </div>
+        </div>
+        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Lecturer, Faculty of Engineering and Technology, Sunway University</div>
+        <div class="student-research">A Conceptual Framework of BIM Adoption for Existing Buildings in the AEC Industry</div>
+        <div class="student-focus">Exploring BIM adoption for existing buildings in the AEC industry, examining implementation and validation approaches among construction practitioners.</div>
+        <div class="student-meta">
+          <span class="student-meta-tag meta-funding"><i class="fa-solid fa-coins"></i> Sunway University Studentship Scheme</span>
+        </div>
+        <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Assoc. Prof. Dr. Tze Ying Sim (Sunway University)</div>
+      </div>
+
+      <div class="student-card" id="mohtashim-baqar">
+        <div class="student-card-header">
+          <div class="student-photo-placeholder"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <div class="student-name">Dr. Mohtashim Baqar</div>
+            <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; PhD in Computing</div>
+          </div>
+        </div>
+        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Lecturer, Melbourne Institute of Technology, Australia</div>
+        <div class="student-research">Full-Reference Image Quality Assessment</div>
+        <div class="student-focus">Research on perceptual image quality assessment, permutation entropy-based features, and non-local means filtering.</div>
+        <div class="student-cosupervisors"><strong>Co-supervisors:</strong> Dr. Mansoor Ebrahim (Iqra University, Pakistan)</div>
+      </div>
+
+      <div class="student-card" id="meera-eeswaran">
+        <div class="student-card-header">
+          <div class="student-photo-placeholder"><i class="fa-solid fa-user"></i></div>
+          <div>
+            <div class="student-name">Dr. Meera Eeswaran</div>
+            <div class="student-role"><span class="role-co">Co-Supervisor</span> &middot; PhD</div>
+          </div>
+        </div>
+        <div class="student-position"><i class="fa-solid fa-briefcase"></i> Senior Lecturer, School of Accounting and Finance, Asia Pacific University of Technology & Innovation</div>
+        <div class="student-cosupervisors"><strong>Main supervisor:</strong> Prof. Susela Devi (Sunway University Business School)</div>
+      </div>
 
       <div class="student-card" id="izzah-sakinah">
         <div class="student-card-header">
+          <img class="student-photo" src="https://sianlun.wordpress.com/wp-content/uploads/2023/08/izzah.png" alt="Izzah Sakinah binti Ahmad" loading="lazy" />
           <div>
             <div class="student-name">Izzah Sakinah binti Ahmad</div>
             <div class="student-role"><span class="role-co">Co-Supervisor</span> &middot; MSc in Computer Science (by Research)</div>
@@ -273,6 +280,7 @@
 
       <div class="student-card" id="micky-chan">
         <div class="student-card-header">
+          <div class="student-photo-placeholder"><i class="fa-solid fa-user"></i></div>
           <div>
             <div class="student-name">Micky Yun Chan</div>
             <div class="student-role"><span class="role-main">Main Supervisor</span> &middot; MSc in Technology</div>
@@ -281,7 +289,6 @@
         <div class="student-cosupervisors"><strong>Co-supervisors:</strong> LUT University, Finland</div>
       </div>
     </section>
-
     <p class="students-note">This page is generated from <code>assets/data/students.csv</code>. Edit the CSV and run <code>python3 generate_students.py</code> to regenerate.</p>
   </main>
 
