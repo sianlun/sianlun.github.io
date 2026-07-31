@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Spray+ — Sian Lun Lau</title>
+  <meta name="description" content="Deep Spray+: Enhanced Deep Learning for Liquid Atomization Image Post-Processing — U.S. Army ITC-PAC funded project" />
+  <meta name="author" content="Sian Lun Lau" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .project-header { padding: 7rem 0 2rem; }
+    .project-header .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--accent); font-size: 0.88rem; font-weight: 500;
+      text-decoration: none; margin-bottom: 1.5rem;
+    }
+    .project-header .back-link:hover { text-decoration: underline; }
+    .project-header h1 {
+      font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem;
+    }
+    .project-header .project-subtitle {
+      color: var(--text-secondary); font-size: 1rem; max-width: 700px;
+    }
+    .project-meta {
+      display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;
+    }
+    .project-meta-item {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      border-radius: 10px; padding: 0.75rem 1.25rem;
+    }
+    .project-meta-label {
+      font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;
+      letter-spacing: 0.05em; margin-bottom: 0.2rem;
+    }
+    .project-meta-value {
+      font-size: 0.92rem; font-weight: 600; color: var(--text-primary);
+    }
+    .project-section { padding: 0 0 2.5rem; }
+    .project-section h2 {
+      font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;
+      padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-soft-border);
+    }
+    .project-overview { font-size: 0.95rem; line-height: 1.8; color: var(--text-secondary); }
+    .project-overview p { margin-bottom: 1rem; }
+    .project-pub-list { list-style: none; }
+    .project-pub-list li {
+      padding: 0.75rem 0; border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.88rem; line-height: 1.6; color: var(--text-secondary);
+      display: flex; gap: 0.75rem;
+    }
+    .project-pub-list li:last-child { border-bottom: none; }
+    .project-pub-num {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+      color: var(--text-muted); min-width: 20px; text-align: right;
+      padding-top: 0.15rem; flex-shrink: 0;
+    }
+    .project-partners {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem;
+    }
+    .project-partner-tag {
+      background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+      border-radius: 8px; padding: 0.4rem 0.85rem; font-size: 0.82rem;
+      font-weight: 500; color: var(--accent);
+    }
+    .project-placeholder {
+      background: var(--bg-secondary); border: 1px dashed var(--border-color);
+      border-radius: 10px; padding: 2rem; text-align: center;
+      color: var(--text-muted); font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">Sian Lun Lau</a>
+    <ul class="navbar-nav">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#teaching">Teaching</a></li>
+      <li><a href="index.html#talks">Professional</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+        <i class="fa-solid fa-sun" id="theme-icon-sun" style="display:none;"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#research">Research</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#teaching">Teaching</a>
+    <a href="index.html#talks">Professional</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <main class="container">
+    <div class="project-header">
+      <a href="index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+      <h1>Deep Spray+</h1>
+      <p class="project-subtitle">Enhanced Deep Learning for Liquid Atomization Image Post-Processing</p>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <div class="project-meta-label">Period</div>
+          <div class="project-meta-value">Oct 2020 – Mar 2024</div>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Funder</div>
+          <div class="project-meta-value">U.S. Army ITC-PAC</div>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Grant</div>
+          <div class="project-meta-value">~USD 82,000</div>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Role</div>
+          <div class="project-meta-value">Principal Investigator</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="project-section">
+      <h2>Overview</h2>
+      <div class="project-overview">
+        <p>Deep Spray+ develops enhanced deep learning models for post-processing images from liquid atomization experiments and simulations. Building on the original Deep Spray project, this work employs convolutional neural networks (CNN), U-Net semantic segmentation, YOLOv4 object detection, and explainable AI (XAI) techniques to analyse shadowgraphy and X-ray images of fuel spray breakup processes.</p>
+        <p>The project addresses four key research questions: generalizability of models across different operating conditions and configurations, improved droplet capture and segmentation, creation of explainable deep learning models for interpreting atomization experiments, and the use of generative adversarial networks (GANs) to synthesize training images. The outcomes advance the understanding of primary breakup processes critical to propulsion systems and combustion engineering.</p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Collaborators</h2>
+      <div class="project-partners">
+        <span class="project-partner-tag">U.S. Army Research Laboratory (ARL)</span>
+        <span class="project-partner-tag">DEVCOM</span>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Related Publications</h2>
+      <ol class="project-pub-list">
+        <li><span class="project-pub-num">1</span><span>W. L. Lim, M. Y. Teow, R. T. Wong, S. L. Lau, "Preserving Fine-Grained Droplet Structures by Spatial Gaussian Blurring Against Pooling Deformation in U-Net-Based Semantic Segmentation," <em>IEEE Access</em>, vol. 14, pp. 25354-25369, 2026.</span></li>
+        <li><span class="project-pub-num">2</span><span>R. K. Pathan, W. L. Lim, M. U. Khandaker, C. C. Ho, S. L. Lau, "The evolution of deep learning models for instance segmentation: a critical review and analysis of future trajectories," <em>International Journal of Multimedia Information Retrieval</em>, vol. 15, no. 3, 21, 2026.</span></li>
+        <li><span class="project-pub-num">3</span><span>W. L. Lim, M. Y. Teow, R. T. Wong, R. K. Pathan, C. C. Ho, R. B. Koneru, P. Khare, L. Bravo, S. L. Lau, "Semantic Liquid Spray Understanding With Computer-Generated Images," <em>IEEE Access</em>, vol. 12, pp. 39968-39977, 2024.</span></li>
+        <li><span class="project-pub-num">4</span><span>T. W. Chin, S. L. Lau, R. T. Wong, L. Bravo, R. B. Koneru, P. Khare, "Saliency-based Explainable Artificial Intelligence (XAI) for Interpreting U-Net Semantic Segmentation of Synthetic Liquid Spray Images," in <em>Proc. IEEE ICOCO</em>, pp. 331-336, 2024.</span></li>
+        <li><span class="project-pub-num">5</span><span>W. L. Lim, M. Y. Teow, R. T. Wong, R. K. Pathan, S. L. Lau, C. C. Ho, L. Bravo, R. B. Koneru, P. Khare, "Performance Assessment of U-Net for Semantic Segmentation of Liquid Spray Images with Gaussian Blurring," in <em>Proc. IEEE ICOCO</em>, pp. 462-467, 2023.</span></li>
+        <li><span class="project-pub-num">6</span><span>R. K. Pathan, W. L. Lim, S. L. Lau, C. C. Ho, L. Bravo, R. B. Koneru, P. Khare, "Application of Computer Vision Techniques to Identify Spray Primary Breakup Structures in High-Speed Flow," in <em>Proc. IEEE ICOCO</em>, pp. 468-474, 2023.</span></li>
+        <li><span class="project-pub-num">7</span><span>T. W. Chin, S. L. Lau, "Explainable Artificial Intelligence (XAI) for Image Segmentation: A Review on Types of Explainability," in <em>Proc. ICCT</em>, 2023.</span></li>
+        <li><span class="project-pub-num">8</span><span>R. K. Pathan, W. L. Lim, S. L. Lau, C. C. Ho, P. Khare, R. B. Koneru, "Experimental Analysis of U-Net and Mask R-CNN for Segmentation of Synthetic Liquid Spray," in <em>Proc. IEEE ICOCO</em>, pp. 237-242, 2022.</span></li>
+        <li><span class="project-pub-num">9</span><span>S. L. Lau, J. Lew, C. C. Ho, S. Su, "Exploratory Investigation on a Naive Pseudo-labelling Technique for Liquid Droplet Images Detection using Semi-supervised Learning," in <em>Proc. IEEE ICOCO</em>, pp. 353-359, 2021.</span></li>
+      </ol>
+    </section>
+
+    <section class="project-section">
+      <h2>Students &amp; Alumni</h2>
+      <div class="project-placeholder">
+        <i class="fa-solid fa-users" style="font-size:1.5rem;margin-bottom:0.5rem;display:block;"></i>
+        To be updated
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align:center;padding:2rem 0;color:var(--text-muted);font-size:0.8rem;border-top:1px solid var(--border-color);margin-top:2rem;">
+    &copy; 2026 Sian Lun Lau. All rights reserved.
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+      if (t === 'dark') { moonIcon.style.display = 'none'; sunIcon.style.display = 'inline'; }
+      else { moonIcon.style.display = 'inline'; sunIcon.style.display = 'none'; }
+    }
+    setTheme(localStorage.getItem('theme') || 'light');
+    themeToggle.addEventListener('click', () => {
+      setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      document.getElementById('progress-bar').style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    });
+  </script>
+</body>
+</html>

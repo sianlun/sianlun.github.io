@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SustHack — Sian Lun Lau</title>
+  <meta name="description" content="SustHack: Synchronizing Sustainable Development Actions between Finland and Malaysia through Hackathons — EDUFI Asia Programme 2019" />
+  <meta name="author" content="Sian Lun Lau" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .project-header { padding: 7rem 0 2rem; }
+    .project-header .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--accent); font-size: 0.88rem; font-weight: 500;
+      text-decoration: none; margin-bottom: 1.5rem;
+    }
+    .project-header .back-link:hover { text-decoration: underline; }
+    .project-header h1 {
+      font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem;
+    }
+    .project-header .project-subtitle {
+      color: var(--text-secondary); font-size: 1rem; max-width: 700px;
+    }
+    .project-meta {
+      display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;
+    }
+    .project-meta-item {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      border-radius: 10px; padding: 0.75rem 1.25rem;
+    }
+    .project-meta-label {
+      font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;
+      letter-spacing: 0.05em; margin-bottom: 0.2rem;
+    }
+    .project-meta-value {
+      font-size: 0.92rem; font-weight: 600; color: var(--text-primary);
+    }
+    .project-section { padding: 0 0 2.5rem; }
+    .project-section h2 {
+      font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;
+      padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-soft-border);
+    }
+    .project-overview { font-size: 0.95rem; line-height: 1.8; color: var(--text-secondary); }
+    .project-overview p { margin-bottom: 1rem; }
+    .project-pub-list { list-style: none; }
+    .project-pub-list li {
+      padding: 0.75rem 0; border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.88rem; line-height: 1.6; color: var(--text-secondary);
+      display: flex; gap: 0.75rem;
+    }
+    .project-pub-list li:last-child { border-bottom: none; }
+    .project-pub-num {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+      color: var(--text-muted); min-width: 20px; text-align: right;
+      padding-top: 0.15rem; flex-shrink: 0;
+    }
+    .project-partners {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem;
+    }
+    .project-partner-tag {
+      background: var(--accent-soft); border: 1px solid var(--accent-soft-border);
+      border-radius: 8px; padding: 0.4rem 0.85rem; font-size: 0.82rem;
+      font-weight: 500; color: var(--accent);
+    }
+    .project-placeholder {
+      background: var(--bg-secondary); border: 1px dashed var(--border-color);
+      border-radius: 10px; padding: 2rem; text-align: center;
+      color: var(--text-muted); font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-brand">Sian Lun Lau</a>
+    <ul class="navbar-nav">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#teaching">Teaching</a></li>
+      <li><a href="index.html#talks">Professional</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+        <i class="fa-solid fa-sun" id="theme-icon-sun" style="display:none;"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#research">Research</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#teaching">Teaching</a>
+    <a href="index.html#talks">Professional</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <main class="container">
+    <div class="project-header">
+      <a href="index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+      <h1>SustHack</h1>
+      <p class="project-subtitle">Synchronizing Sustainable Development Actions between Finland and Malaysia: The Hackathon Approach</p>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <div class="project-meta-label">Period</div>
+          <div class="project-meta-value">2019 – 2021</div>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Funder</div>
+          <div class="project-meta-value">EDUFI (Asia Programme 2019)</div>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Grant</div>
+          <div class="project-meta-value">~&euro;32,000</div>
+        </div>
+        <div class="project-meta-item">
+          <div class="project-meta-label">Role</div>
+          <div class="project-meta-value">Partner / Co-Investigator</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="project-section">
+      <h2>Overview</h2>
+      <div class="project-overview">
+        <p>SustHack aims to emphasize sustainability perception in computing education by utilizing co-creative hackathons addressing local sustainability challenges in both Finland and Malaysia. These cross-national hackathons emphasize the possibilities of IT in sustainable development and increase the understanding of sustainability in the computing field.</p>
+        <p>The project organized 6 hackathons (4 physical with staff/student mobility and 2 virtual) during 2019–2021, engaging PhD and master's students as well as interested citizens and local stakeholders. Activities focused on staff/student mobility, common study modules, and curricula development reflecting lessons learned from the hackathons. SustHack served as a trailblazer in leveraging hackathons for sustainability education and laid the groundwork for subsequent projects like ImpactXChange.</p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Partners</h2>
+      <div class="project-partners">
+        <span class="project-partner-tag">LUT University (Coordinator)</span>
+        <span class="project-partner-tag">Sunway University</span>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Related Publications</h2>
+      <ol class="project-pub-list">
+        <li><span class="project-pub-num">1</span><span>M. O. Adisa, "SustHack: Hackathons as a model of citizen participation in innovating for sustainable urban development," in <em>Citizen Participation in Sustainable Urban Development from the Nordics</em>, Routledge, pp. 97-113, 2025.</span></li>
+        <li><span class="project-pub-num">2</span><span>M. O. Adisa, S. Oyedeji, J. Porras, S. L. Lau, T. Y. Sim, T. T. Ajagbe, "Learning By Doing: Demonstrating Sustainability Mindset in ICT Education through Hackathons," in <em>Proc. IEEE ICT4S</em>, pp. 187-197, 2025.</span></li>
+        <li><span class="project-pub-num">3</span><span>S. L. Lau, T. Y. Sim, M. O. Adisa, J. Porras, "Effectiveness of Hackathons to Cultivate a Sustainability Mindset among Engineering and Computing Students," in <em>Proc. IEEE TALE</em>, 2023.</span></li>
+        <li><span class="project-pub-num">4</span><span>M. O. Adisa, S. Oyedeji, L. Abdullai, J. Porras, S. L. Lau, "SustHack: A hackathon approach for engaging citizens and fostering a sustainability mindset," <em>CEUR Workshop Proceedings</em>, vol. 3506, pp. 116-127, 2023.</span></li>
+        <li><span class="project-pub-num">5</span><span>S. L. Lau, "Towards a sustainable future through data-centric solutions: potentials and challenges," <em>Procedia Computer Science</em>, vol. 216, p. 2, 2023.</span></li>
+        <li><span class="project-pub-num">6</span><span>M. Y. Chan, S. L. Lau, J. Porras, "An Empirical Study on Power Consumption of Decentralised Identity Management Systems," in <em>Proc. IEEE ICOCO</em>, pp. 289-294, 2023.</span></li>
+      </ol>
+    </section>
+
+    <section class="project-section">
+      <h2>Students &amp; Alumni</h2>
+      <div class="project-placeholder">
+        <i class="fa-solid fa-users" style="font-size:1.5rem;margin-bottom:0.5rem;display:block;"></i>
+        To be updated
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align:center;padding:2rem 0;color:var(--text-muted);font-size:0.8rem;border-top:1px solid var(--border-color);margin-top:2rem;">
+    &copy; 2026 Sian Lun Lau. All rights reserved.
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+      if (t === 'dark') { moonIcon.style.display = 'none'; sunIcon.style.display = 'inline'; }
+      else { moonIcon.style.display = 'inline'; sunIcon.style.display = 'none'; }
+    }
+    setTheme(localStorage.getItem('theme') || 'light');
+    themeToggle.addEventListener('click', () => {
+      setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      document.getElementById('progress-bar').style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    });
+  </script>
+</body>
+</html>
