@@ -319,6 +319,7 @@ def generate_html(students):
       document.getElementById('progress-bar').style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
     }});
   </script>
+  <script data-goatcounter="https://sianlun.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>"""
     return html
