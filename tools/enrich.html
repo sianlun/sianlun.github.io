@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrich Points Value Calculator</title>
+    <style>
+        :root {
+            --primary-color: #0032A0; /* Malaysia Airlines Blue */
+            --secondary-color: #E31837; /* Malaysia Airlines Red */
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .calculator {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            max-width: 550px;
+            width: 100%;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .hint {
+            display: block;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.4rem;
+            font-weight: normal;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.15);
+        }
+
+        .results {
+            margin-top: 2rem;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.85rem;
+            font-size: 1.05rem;
+        }
+
+        .result-item.total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-top: 1px solid #e0e0e0;
+            padding-top: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+
+        .positive { color: #2e7d32; font-weight: bold; }
+        .negative { color: var(--secondary-color); font-weight: bold; }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <h2>Enrich Point Calculator</h2>
+
+        <div class="input-group">
+            <label for="basePoints">Base Points Acquired</label>
+            <span class="hint">The number of points you get before any bank transfer bonuses.</span>
+            <input type="number" id="basePoints" value="10000" min="0">
+        </div>
+
+        <div class="grid-2">
+            <div class="input-group">
+                <label for="acqSpend">Spend Amount (RM)</label>
+                <span class="hint">Amount spent to get points</span>
+                <input type="number" id="acqSpend" value="1000" min="0">
+            </div>
+            
+            <div class="input-group">
+                <label for="acqFee">Acquisition Cost (%)</label>
+                <span class="hint">e.g., 1% e-wallet, 1.7% Everypay</span>
+                <input type="number" id="acqFee" value="1.7" step="0.1" min="0">
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="input-group">
+                <label for="bankBonus">Bank Transfer Bonus (%)</label>
+                <span class="hint">Extra points during campaign</span>
+                <input type="number" id="bankBonus" value="10" min="0">
+            </div>
+
+            <div class="input-group">
+                <label for="enrichMoneyBonus">Enrich Money Bonus (%)</label>
+                <span class="hint">Bonus when using points to pay</span>
+                <input type="number" id="enrichMoneyBonus" value="0" min="0">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="baseValue">Base Value per Point (RM)</label>
+            <span class="hint">Default is RM0.0125 (4,000 points = RM50 Enrich Money)</span>
+            <input type="number" id="baseValue" value="0.0125" step="0.0001" min="0">
+        </div>
+
+        <div class="results">
+            <div class="result-item">
+                <span>Total Points Yield:</span>
+                <span id="resPoints">0</span>
+            </div>
+            <div class="result-item">
+                <span>Total Acquisition Cost:</span>
+                <span id="resCost">RM 0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Total Points Value:</span>
+                <span id="resValue">RM 0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Net Profit / Loss:</span>
+                <span id="resNet">RM 0.00</span>
+            </div>
+            <div class="result-item total">
+                <span>Net Value per Point:</span>
+                <span id="resValuePerPoint">RM 0.0000</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            // Retrieve values from inputs
+            const basePoints = parseFloat(document.getElementById('basePoints').value) || 0;
+            const bankBonus = parseFloat(document.getElementById('bankBonus').value) || 0;
+            const acqSpend = parseFloat(document.getElementById('acqSpend').value) || 0;
+            const acqFee = parseFloat(document.getElementById('acqFee').value) || 0;
+            const baseValue = parseFloat(document.getElementById('baseValue').value) || 0;
+            const enrichMoneyBonus = parseFloat(document.getElementById('enrichMoneyBonus').value) || 0;
+
+            // Mathematical Logic
+            const totalPoints = basePoints * (1 + (bankBonus / 100));
+            const totalCost = acqSpend * (acqFee / 100);
+            
+            // Value of a point after Enrich conversion bonuses
+            const nominalValuePerPoint = baseValue * (1 + (enrichMoneyBonus / 100));
+            const totalValue = totalPoints * nominalValuePerPoint;
+            
+            // Net calculations
+            const netProfit = totalValue - totalCost;
+
+            // Update UI
+            document.getElementById('resPoints').innerText = totalPoints.toLocaleString(undefined, { maximumFractionDigits: 0 }) + ' pts';
+            document.getElementById('resCost').innerText = 'RM ' + totalCost.toFixed(2);
+            document.getElementById('resValue').innerText = 'RM ' + totalValue.toFixed(2);
+
+            // Style Net Profit/Loss
+            const resNet = document.getElementById('resNet');
+            resNet.innerText = (netProfit >= 0 ? '+RM ' : '-RM ') + Math.abs(netProfit).toFixed(2);
+            resNet.className = netProfit >= 0 ? 'positive' : 'negative';
+
+            // Calculate exact net value per point (Nominal Value - Cost to Acquire 1 Point)
+            if (totalPoints > 0) {
+                const costPerPoint = totalCost / totalPoints;
+                const netValuePerPoint = nominalValuePerPoint - costPerPoint;
+                document.getElementById('resValuePerPoint').innerText = 'RM ' + netValuePerPoint.toFixed(4);
+            } else {
+                document.getElementById('resValuePerPoint').innerText = 'RM 0.0000';
+            }
+        }
+
+        // Attach event listeners for real-time calculation
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', calculate);
+        });
+
+        // Run calculation once on load to populate default values
+        calculate();
+    </script>
+</body>
+</html>
